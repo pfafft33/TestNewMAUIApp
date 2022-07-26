@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestNewMAUIApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Margin="20">
+
+            <HorizontalStackLayout Margin="10">
+                <Label Text="Name:"
+                   FontSize="Large"
+                   VerticalOptions="Center"
+                   WidthRequest="160"
+                   HorizontalOptions="End" />
+                <Entry x:Name="MyStoreDetailsNameEntry"
+                   Text="{Binding Name, Mode=TwoWay}"
+                   BackgroundColor="AliceBlue"
+                   FontSize="Large"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start"
+                   Completed="MyStoreDetailsNameEntry_Completed">
+                    <!--<Entry.Behaviors>
+                    <toolkit:EventToCommandBehavior
+                        x:DataType="viewmodels:StoreDetailsViewModel"
+                        EventName="Completed"
+                        Command="{Binding Path=BindingContext.StoreDetailsNameCompletedCommand,
+                        Source={Reference myStoreDetailsPage}}"
+                        CommandParameter="{Reference MyStoreDetailsNameEntry}"/>
+                </Entry.Behaviors>-->
+                </Entry>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Margin="10">
+                <Label Text="Phone:"
+                   FontSize="Large"
+                    VerticalOptions="Center" 
+                    WidthRequest="160"
+                    HorizontalOptions="End" />
+                <Entry x:Name="MyStoreDetailsPhoneEntry"
+                   Text="{Binding Phone, Mode=TwoWay}"
+                   BackgroundColor="AliceBlue"
+                   FontSize="Large"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start"
+                   Completed="MyStoreDetailsPhoneEntry_Completed">
+                    <!--<Entry.Behaviors>
+                    <toolkit:EventToCommandBehavior
+                        x:DataType="viewmodels:StoreDetailsViewModel"
+                        EventName="Completed"
+                        Command="{Binding Path=BindingContext.StoreDetailsPhoneCompletedCommand,
+                        Source={Reference myStoreDetailsPage}}"
+                        CommandParameter="{Reference MyStoreDetailsPhoneEntry}"/>
+                </Entry.Behaviors>-->
+                </Entry>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>
